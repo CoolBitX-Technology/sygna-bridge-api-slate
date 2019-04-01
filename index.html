@@ -228,13 +228,13 @@
             <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#add-user" class="toc-h2 toc-link" data-title="Add User">Add User</a>
+                    <a href="#adduser" class="toc-h2 toc-link" data-title="addUser">addUser</a>
                   </li>
                   <li>
-                    <a href="#sygnaaddress" class="toc-h2 toc-link" data-title="SygnaAddress">SygnaAddress</a>
+                    <a href="#sygnaaddress" class="toc-h2 toc-link" data-title="sygnaAddress">sygnaAddress</a>
                   </li>
                   <li>
-                    <a href="#link-address" class="toc-h2 toc-link" data-title="Link Address">Link Address</a>
+                    <a href="#linkaddress" class="toc-h2 toc-link" data-title="linkAddress">linkAddress</a>
                   </li>
               </ul>
           </li>
@@ -242,7 +242,7 @@
             <a href="#address" class="toc-h1 toc-link" data-title="Address">Address</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-address-status" class="toc-h2 toc-link" data-title="Get Address Status">Get Address Status</a>
+                    <a href="#addressstatus" class="toc-h2 toc-link" data-title="addressStatus">addressStatus</a>
                   </li>
               </ul>
           </li>
@@ -251,7 +251,7 @@
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://coolwallet.io/contact/'>Sign Up for a Developer Key</a></li>
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -259,15 +259,15 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>The Sygna API allows you to validate the source or recipient of a Blockchain transaction.</p>
+<p>The Sygna API allows you to validate the source or recipient of a Blockchain transaction</p>
 
 <p><strong>API METHODS:</strong></p>
 
 <p><em><strong><code>GET</code></strong></em><br>
-- <strong>getAddressStatus</strong> - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...) </p>
+- <strong>addressStatus</strong> - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...) 
+- <strong>sygnaAddress</strong> -  fetches an existing Sygna-Certified address for a user who has already been KYC&#39;d</p>
 
 <p><em><strong><code>POST</code></strong></em><br>
-- <strong>createSygnaAddress</strong> -  Generates a Sygna-Certified address for a user who has already been KYC&#39;d.<br>
 - <strong>addUser</strong> - Adds a user to the Sygna whitelist - requires the User to have already gone through the exchange KYC<br>
 - <strong>linkAddress</strong>  - Links an existing Address to an existing Sygna UserID. (Individual Addresses have to be linked to KYC identities)</p>
 
@@ -281,9 +281,9 @@ Note — (API <b>not currently active</b> as it is being worked on)
 <p>Production server URL for the API is located at:<br>
 <code>https://api.sygna.com/api/syg/v1</code></p>
 <h1 id='authentication'>Authentication</h1>
-<p>We are using <code>OAuth 2.0</code> for Authentication. </p>
-<h1 id='users'>Users</h1><h2 id='add-user'>Add User</h2>
-<p>Adds a user to the Sygna whitelist - requires the User to have already gone through the exchange KYC</p>
+<p>We are using <code>OAuth 2.0</code> for Authentication </p>
+<h1 id='users'>Users</h1><h2 id='adduser'>addUser</h2>
+<p>Adds a user to the Sygna whitelist - requires the User to have already gone through an exchange KYC</p>
 <h3 id='http-request'>HTTP Request</h3>
 <blockquote>
 <p>Request Body</p>
@@ -342,12 +342,12 @@ Note — (API <b>not currently active</b> as it is being worked on)
 <aside class="success">
 Remember — A user first has to be added before his addresses can be Sygna-Certified
 </aside>
-<h2 id='sygnaaddress'>SygnaAddress</h2>
+<h2 id='sygnaaddress'>sygnaAddress</h2>
 <p>Requests an existing SygnaWallet Address (for existing Sygna user). The user must have a Sygna Wallet and activated it. (NB: in a SygnaWallet, Sygna acts as the custodian of the private keys)</p>
 
-<p><em>usage</em>: fetches exchisting SygnaWallet Address</p>
+<p><em>usage</em>: fetches existing SygnaWallet Address</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><strong><code>POST</code></strong><code>https://api.sygna.com/api/syg/v1/users/{sygnaUserId}/{coinType}/</code></p>
+<p><strong><code>GET</code></strong><code>https://api.sygna.com/api/syg/v1/users/{sygnaUserId}/{coinType}/</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -383,7 +383,7 @@ Remember — A user first has to be added before his addresses can be Sygna-Cert
 <td>New Sygna address for that user</td>
 </tr>
 </tbody></table>
-<h2 id='link-address'>Link Address</h2>
+<h2 id='linkaddress'>linkAddress</h2>
 <blockquote>
 <p>Request Body</p>
 </blockquote>
@@ -420,7 +420,7 @@ Remember — A user first has to be added before his addresses can be Sygna-Cert
 <td>The address from exchange wallet</td>
 </tr>
 </tbody></table>
-<h1 id='address'>Address</h1><h2 id='get-address-status'>Get Address Status</h2>
+<h1 id='address'>Address</h1><h2 id='addressstatus'>addressStatus</h2>
 <p>When you want to query the status of an address</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><strong><code>GET</code></strong><code>https://api.sygna.com/api/syg/v1/addresses/{address}/status</code></p>
