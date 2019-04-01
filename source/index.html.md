@@ -16,7 +16,7 @@ search: true
 
 # Introduction
 
-The Sygna API allows you to validate the source or recipient of a Blockchain transaction.
+The Sygna API allows you to validate the source or recipient of a Blockchain transaction. Based on Slate.
 
 **API METHODS:**
 
@@ -24,7 +24,7 @@ _**`GET`**_
 - **getAddressStatus** - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...) 
 
 _**`POST`**_  
-- **createSygnaAddress** -  Generates a Sygna-Certified address for a user who has already been KYC'd.    
+- **SygnaAddress** -  Generates a Sygna-Certified address for a user who has already been KYC'd.    
 - **addUser** - Adds a user to the Sygna whitelist - requires the User to have already gone through the exchange KYC  
 - **linkAddress**  - Links an existing Address to an existing Sygna UserID. (Individual Addresses have to be linked to KYC identities)
 
@@ -99,7 +99,7 @@ _usage_: fetches exchisting SygnaWallet Address
 
 ### HTTP Request
 
-**`POST`**`https://api.sygna.com/api/syg/v1/users/{sygnaUserId}/{coinType}/`
+**`GET`**`https://api.sygna.com/api/syg/v1/users/{sygnaUserId}/{coinType}/`
 
 ### URL Parameters
 
