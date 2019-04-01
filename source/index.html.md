@@ -5,7 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
 
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://coolwallet.io/contact/'>Sign Up for a Developer Key</a>
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -16,15 +16,15 @@ search: true
 
 # Introduction
 
-The Sygna API allows you to validate the source or recipient of a Blockchain transaction. Based on Slate.
+The Sygna API allows you to validate the source or recipient of a Blockchain transaction
 
 **API METHODS:**
 
 _**`GET`**_   
-- **getAddressStatus** - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...) 
+- **addressStatus** - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...) 
+- **sygnaAddress** -  fetches an existing Sygna-Certified address for a user who has already been KYC'd
 
-_**`POST`**_  
-- **SygnaAddress** -  Generates a Sygna-Certified address for a user who has already been KYC'd.    
+_**`POST`**_     
 - **addUser** - Adds a user to the Sygna whitelist - requires the User to have already gone through the exchange KYC  
 - **linkAddress**  - Links an existing Address to an existing Sygna UserID. (Individual Addresses have to be linked to KYC identities)
 
@@ -40,13 +40,13 @@ Production server URL for the API is located at:
 `https://api.sygna.com/api/syg/v1`
 
 # Authentication
-We are using `OAuth 2.0` for Authentication. 
+We are using `OAuth 2.0` for Authentication 
 
 # Users
 
-## Add User
+## addUser
 
-Adds a user to the Sygna whitelist - requires the User to have already gone through the exchange KYC
+Adds a user to the Sygna whitelist - requires the User to have already gone through an exchange KYC
 
 ### HTTP Request
 > Request Body
@@ -91,11 +91,11 @@ Adds a user to the Sygna whitelist - requires the User to have already gone thro
 Remember — A user first has to be added before his addresses can be Sygna-Certified
 </aside>
 
-## SygnaAddress
+## sygnaAddress
 
 Requests an existing SygnaWallet Address (for existing Sygna user). The user must have a Sygna Wallet and activated it. (NB: in a SygnaWallet, Sygna acts as the custodian of the private keys)
 
-_usage_: fetches exchisting SygnaWallet Address
+_usage_: fetches existing SygnaWallet Address
 
 ### HTTP Request
 
@@ -122,7 +122,7 @@ _usage_: fetches exchisting SygnaWallet Address
 | sygnaAddress | New Sygna address for that user  |
 
 
-## Link Address
+## linkAddress
 
 > Request Body
 
@@ -156,7 +156,7 @@ Links an existing Address to an existing Sygna UserID.
 
 # Address
 
-## Get Address Status
+## addressStatus
 
 
 
