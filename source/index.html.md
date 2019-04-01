@@ -21,8 +21,7 @@ The Sygna API allows you to validate the source or recipient of a Blockchain tra
 **API METHODS:**
 
 _**`GET`**_   
-- **addressStatus** - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...)
-
+- **addressStatus** - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...)   
 - **sygnaAddress** -  fetches an existing Sygna-Certified address for a user who has already been KYC'd
 
 _**`POST`**_  
