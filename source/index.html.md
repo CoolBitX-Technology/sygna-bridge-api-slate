@@ -21,11 +21,11 @@ The Sygna API allows you to validate the source or recipient of a Blockchain tra
 **API METHODS:**
 
 _**`GET`**_   
-- **addressStatus** - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...)   
-- **sygnaAddress** -  fetches an existing Sygna-Certified address for a user who has already been KYC'd
+- **Sygna Address** -  fetches an existing Sygna-Certified address for a user who has already been KYC'd  
+- **Address Status** - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...)   
 
 _**`POST`**_  
-- **linkAddress**  - Links an existing Address to an existing Sygna UserID. (Individual Addresses have to be linked to KYC identities)
+- **Link Address**  - Links an existing Address to an existing Sygna UserID. (Individual Addresses have to be linked to KYC identities)
 
 <aside class="success">
 Note — (API <b>not currently active</b> as it is being worked on)
@@ -44,7 +44,7 @@ Design being finalized and tweaked. Shoukd be finalized soon.
 
 # Users
 
-## SygnaAddress
+## Sygna Address
 
 Requests an existing SygnaWallet Address (for existing Sygna user). The user must have a Sygna Wallet and activated it. (NB: in a SygnaWallet, Sygna acts as the custodian of the private keys)
 
@@ -110,7 +110,7 @@ Links an existing Address to an existing Sygna UserID.
 
 # Address
 
-## Get Address Status
+## Address Status
 
 
 When you want to query the status of an address
