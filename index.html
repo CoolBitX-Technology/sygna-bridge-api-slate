@@ -228,7 +228,7 @@
             <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#sygnaaddress" class="toc-h2 toc-link" data-title="SygnaAddress">SygnaAddress</a>
+                    <a href="#sygna-address" class="toc-h2 toc-link" data-title="Sygna Address">Sygna Address</a>
                   </li>
                   <li>
                     <a href="#link-address" class="toc-h2 toc-link" data-title="Link Address">Link Address</a>
@@ -239,7 +239,7 @@
             <a href="#address" class="toc-h1 toc-link" data-title="Address">Address</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-address-status" class="toc-h2 toc-link" data-title="Get Address Status">Get Address Status</a>
+                    <a href="#address-status" class="toc-h2 toc-link" data-title="Address Status">Address Status</a>
                   </li>
               </ul>
           </li>
@@ -261,11 +261,11 @@
 <p><strong>API METHODS:</strong></p>
 
 <p><em><strong><code>GET</code></strong></em><br>
-- <strong>addressStatus</strong> - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...)<br>
-- <strong>sygnaAddress</strong> -  fetches an existing Sygna-Certified address for a user who has already been KYC&#39;d</p>
+- <strong>Sygna Address</strong> -  fetches an existing Sygna-Certified address for a user who has already been KYC&#39;d<br>
+- <strong>Address Status</strong> - Queries the status of an address (ex: External, Whitelisted, Banned, Restricted, ...)   </p>
 
 <p><em><strong><code>POST</code></strong></em><br>
-- <strong>linkAddress</strong>  - Links an existing Address to an existing Sygna UserID. (Individual Addresses have to be linked to KYC identities)</p>
+- <strong>Link Address</strong>  - Links an existing Address to an existing Sygna UserID. (Individual Addresses have to be linked to KYC identities)</p>
 
 <aside class="success">
 Note — (API <b>not currently active</b> as it is being worked on)
@@ -279,7 +279,7 @@ Note — (API <b>not currently active</b> as it is being worked on)
 <h1 id='authentication'>Authentication</h1>
 <p>Design being finalized and tweaked. Shoukd be finalized soon.
 (will be using <code>OAuth 2.0</code>.)</p>
-<h1 id='users'>Users</h1><h2 id='sygnaaddress'>SygnaAddress</h2>
+<h1 id='users'>Users</h1><h2 id='sygna-address'>Sygna Address</h2>
 <p>Requests an existing SygnaWallet Address (for existing Sygna user). The user must have a Sygna Wallet and activated it. (NB: in a SygnaWallet, Sygna acts as the custodian of the private keys)</p>
 
 <p><em>usage</em>: fetches exchisting SygnaWallet Address</p>
@@ -361,7 +361,7 @@ Note — (API <b>not currently active</b> as it is being worked on)
 <td>Crypto address format (BTC/ETH/BCH)</td>
 </tr>
 </tbody></table>
-<h1 id='address'>Address</h1><h2 id='get-address-status'>Get Address Status</h2>
+<h1 id='address'>Address</h1><h2 id='address-status'>Address Status</h2>
 <p>When you want to query the status of an address</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><strong><code>GET</code></strong><code>https://api.sygna.com/api/syg/v1/addresses/{address}?q=status</code></p>
