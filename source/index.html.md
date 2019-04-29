@@ -39,8 +39,12 @@ Production server URL for the API is located at:
 `https://api.sygna.com/api/syg/v1`
 
 # Authentication
-Design being finalized and tweaked. Shoukd be finalized soon.
-(will be using `OAuth 2.0`.)
+
+[Documentation] (https://hackmd.io/s/H1zZ4F6cV)
+
+1. The third party platform could exchange the user id for sygna user reference id via Sygna SSO login.
+
+2. Sign in for one time and using everywhere.
 
 # Users
 
